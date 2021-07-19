@@ -1,0 +1,580 @@
+@keyframes rotateMain {
+    50% {
+        transform: rotateZ(180deg);
+        border-radius: 50%;
+    }
+    100% {
+        transform: rotateZ(360deg);
+        border-radius: 35%;
+    }
+}
+
+:root {
+    /* 主色 */
+    --b3-theme-primary: #4285f4;
+    --b3-theme-primary-light: rgba(66, 133, 244, 0.54);
+    --b3-theme-primary-lighter: rgba(66, 133, 244, 0.38);
+    --b3-theme-primary-lightest: rgba(66, 133, 244, 0.12);
+    --b3-theme-secondary: #f3a92f;
+    --b3-theme-background: #f8f9fa;
+    --b3-theme-surface: #f3f3f3;
+    --b3-theme-surface-light: rgba(243, 243, 243, .86);
+    --b3-theme-error: #d23f31;
+
+    /* 文字颜色 */
+    --b3-theme-on-primary: #fff;
+    --b3-theme-on-secondary: #fff;
+    --b3-theme-on-background: #202124;
+    --b3-theme-on-surface: #5f6368;
+    --b3-theme-on-error: #fff;
+
+    /* 字体 */
+    --b3-font-family: "quote", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family-code: "JetBrainsMono-Regular", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family-graph: mononoki;
+
+    /* 线条 */
+    --b3-border-color: rgba(0, 0, 0, .1);
+
+    /* 滚动条 */
+    --b3-scroll-color: rgba(0, 0, 0, .2);
+
+    /* 列表 */
+    --b3-list-hover: rgba(0, 0, 0, .05);
+
+    /* 页签 */
+    --b3-tab-background: #f3f3f3;
+    --b3-tab-background-hover: #e9eaeb;
+
+    /* 菜单 */
+    --b3-menu-background: #f8f9fa;
+
+    /* 提示 */
+    --b3-tooltips-color: rgba(0, 0, 0, 0.54);
+
+    /* 卡片背景 */
+    --b3-card-error-color: rgb(97, 26, 21);
+    --b3-card-error-background: rgb(253, 236, 234);
+    --b3-card-warning-color: rgb(102, 60, 0);
+    --b3-card-warning-background: rgb(255, 244, 229);
+    --b3-card-info-color: rgb(13, 60, 97);
+    --b3-card-info-background: rgb(232, 244, 253);
+    --b3-card-success-color: rgb(30, 70, 32);
+    --b3-card-success-background: rgb(237, 247, 237);
+
+    /* 自定义文字 */
+    --b3-font-color1: var(--b3-card-error-color);
+    --b3-font-color2: var(--b3-card-warning-color);
+    --b3-font-color3: var(--b3-card-info-color);
+    --b3-font-color4: var(--b3-card-success-color);
+    --b3-font-color5: var(--b3-theme-on-surface);
+    --b3-font-color6: var(--b3-theme-primary);
+    --b3-font-color7: var(--b3-theme-secondary);
+    --b3-font-color8: var(--b3-theme-error);
+    --b3-font-color9: #f5539e;
+    --b3-font-color10: #944194;
+    --b3-font-color11: #65b84d;
+    --b3-font-color12: #f5822e;
+    --b3-font-color13: var(--b3-theme-background);
+    --b3-font-background1: var(--b3-card-error-background);
+    --b3-font-background2: var(--b3-card-warning-background);
+    --b3-font-background3: var(--b3-card-info-background);
+    --b3-font-background4: var(--b3-card-success-background);
+    --b3-font-background5: var(--b3-theme-surface);
+    --b3-font-background6: var(--b3-theme-primary-light);
+    --b3-font-background7: rgba(217, 211, 215, 0.5);
+    --b3-font-background8: rgba(255, 193, 153, 0.5);
+    --b3-font-background9: rgba(189, 201, 255, 0.5);
+    --b3-font-background10: rgba(239, 218, 251, 0.5);
+    --b3-font-background11: rgba(234, 202, 220, 0.5);
+    --b3-font-background12: rgba(253, 198, 200, 0.5);
+    --b3-font-background13: var(--b3-theme-on-background);
+
+    /* 动画效果 */
+    --b3-transition: all .15s cubic-bezier(0, 0, .2, 1) 0ms;
+    --b3-width-transition: width .15s cubic-bezier(0, 0, .2, 1) 0ms;
+
+    /* 阴影 */
+    --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+
+    /* diff */
+    --b3-diff-add: #dfd;
+    --b3-diff-add-surface: #97f295;
+    --b3-diff-del: #fee8e9;
+    --b3-diff-del-surface: #ffb6ba;
+
+    /* 图表颜色 */
+    --b3-graph-p-point: #076f7e;
+    --b3-graph-heading-point: #660e7a;
+    --b3-graph-math-point: #80FFA5;
+    --b3-graph-code-point: #00DDFF;
+    --b3-graph-table-point: #37A2FF;
+    --b3-graph-list-point: #FF0087;
+    --b3-graph-todo-point: #FFBF00;
+    --b3-graph-olist-point: #b3005f;
+    --b3-graph-listitem-point: #f65b00;
+    --b3-graph-bq-point: #8d48e3;
+    --b3-graph-super-point: #dd79ff;
+    --b3-graph-doc-point: #202124;
+    --b3-graph-tag-point: #dbf32f;
+    --b3-graph-asset-point: #05c091;
+    --b3-graph-line: #5f6368;
+    --b3-graph-ref-line: #d23f31;
+    --b3-graph-tag-line: #5f6b06;
+    --b3-graph-tag-tag-line: #dbf32f;
+    --b3-graph-asset-line: #037457;
+    --b3-graph-hl-point: #f3a92f;
+    --b3-graph-hl-line: #4285f4;
+
+    /* 编辑器搜索颜色 */
+    --b3-protyle-search-background: #ffe955;
+    --b3-protyle-search-border-color: #f2e680;
+    --b3-protyle-search-current-background: #a5d3fe;
+
+    /* 代码片段背景 */
+    --b3-protyle-code-background: rgba(27, 31, 35, .05);
+
+    /* 所见即所得行内元素颜色 */
+    --b3-protyle-inline-strong-color: #202124;
+    --b3-protyle-inline-em-color: #202124;
+    --b3-protyle-inline-s-color: #202124;
+    --b3-protyle-inline-link-color: #4285f4;
+    --b3-protyle-inline-mark-background: #ffe955;
+    --b3-protyle-inline-mark-color: #202124;
+    --b3-protyle-inline-tag-color: #5f6368;
+    --b3-protyle-inline-blockref-color: #660e7a;
+    
+    
+    /*主体背景*/
+    --custom-background: #FFFFFFCC;
+    /*模糊度*/
+    --custom-blur: blur(40px);
+    /*编辑区的最大宽度*/
+    --custom-max-width: 1440px;
+    
+    /*#EEEEEE88;*/
+    --custom-transparent:#EEEEEE88;
+    /*组件*/
+    --custom-components: #EEEEEE;
+    --custom-components-deeper: #EEEEEE;
+    --transparent: #BBBBBBAA;
+    --custom-transparent-deep: #DDDDDDDD;
+    --custom-transparent-deeper: #EEEEEEDD;
+
+    /*二级文字颜色*/
+    --custom-font-lighter: #2b2b2b8C;
+
+}
+
+/************************布局相关 这部分随意更改可能会影响正常使用************************/
+/*布局相关***********************/
+body.body--win32 {
+    -webkit-font-smoothing: auto;
+    border: 1px solid var(--b3-border-color);
+    background-image:url(cliff_bg.jpg);
+    background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+    z-index: -1;
+    position: static;
+    zoom: 1;
+}
+/*最底层*/
+/*-默认-b3-theme-surface*/
+.layout-tab-container{
+	background-color:#00000000!important;
+}
+/*编辑区文件名*/
+.protyle-title__input{
+	background:#00000000!important;
+}
+/*编辑区*/
+.protyle {
+	background:#00000000!important;
+}
+
+/*不打开文档时的界面*/
+.layout__empty.b3-list{
+	background: #00000000;
+}
+.layout__empty.b3-list>h1{
+	display:none;
+}
+.layout__empty.b3-list>.b3-list-item{
+	display:none;
+}
+/*动画效果*/
+.layout__empty.b3-list>.fn__hr{
+    position: relative;
+    width: 35vmin;
+    height: 35vmin;
+    background: linear-gradient(120deg, #EE6363 0%, #EE799F 100%);
+    opacity: .8;
+    margin: 25vh auto;
+    border-radius: 35%;
+    animation: rotateMain 8s linear infinite;
+}
+.layout__empty.b3-list>.fn__hr::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #EE6363 0%, #EE6AA7 100%);
+    opacity: .8;
+    box-shadow: 5px 5px 90px rgba(10, 102, 255, 0.5);
+    border-radius: 35%;
+    animation: rotateMain 8s linear 2s infinite;
+}
+.layout__empty.b3-list>.fn__hr::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(60deg, #EE7621 0%, #EE4000 100%);
+    opacity: .8;
+    box-shadow: 5px 5px 60px rgba(20, 102, 255, 0.3);
+    border-radius: 35%;
+    animation: rotateMain 8s linear 4s infinite;
+    z-index: -1;
+}
+
+
+
+/*参考VIWZ的ROOM主题 文件树,以及编辑区的主体设置*/
+/*背景颜色和效果相关内容也在这里修改*/
+.fn__flex-1.fn__flex [data-type='wnd']{
+    min-height: 90% !important;
+    margin: 0px auto;
+    padding: 2px 10px;
+    position: relative;
+    margin: 15px;
+	overflow: hidden;
+	z-index: 2;
+	box-sizing: border-box;
+	border-radius: 6px;
+    box-shadow: 2px 5px 4px 3px #00000038;
+}
+[data-type='wnd']::before{
+    content: '';
+	position: absolute!important;
+	top: 0;	left: 0; right: 0;	bottom: 0;
+	z-index: -3;   
+	background-position: center top;
+	background-size: cover;
+	background-attachment: fixed;
+	background: var(--custom-background);
+    backdrop-filter: var(--custom-blur)!important;
+}
+.layout__center .fn__flex-1.fn__flex [data-type='wnd']{
+    margin: 15px auto;
+    padding: 0;
+	max-width: var(--custom-max-width);
+}
+/*编辑区左右padding*/
+.b3-typography p, .b3-typography [data-node-id], .protyle-wysiwyg p, .protyle-wysiwyg [data-node-id]{
+	margin-left:20px;
+	margin-right:20px;
+} 
+/*关系图面板*/
+.graph{
+	background:#00000000!important;
+}
+
+/*全屏模式*/
+.fn__flex-1.protyle.fullscreen{
+	background-image:url(darcula_bg.jpg)!important;
+	background-position:center!important;
+	background-size:cover!important;
+	background-repeat:no-repeat!important;
+}
+.fn__flex-1.protyle.fullscreen .protyle-content{
+    backdrop-filter: blur(2px);
+	background-color:var(--custom-transparent)!important;
+}
+.fn__flex-1.protyle.fullscreen .protyle-content .protyle-background{
+	margin:0px;
+	min-height: 30vh
+}
+
+/*顶端菜单栏*/
+.toolbar{
+	background-color:var(--custom-components)!important;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+/*左侧菜单栏*/
+#dockLeft{
+	background-color:var(--custom-components)!important;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.block__icons--active{
+	background-color:none;
+}
+/*右侧菜单栏*/
+#dockRight{
+	background-color:var(--custom-components)!important;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+/*页签*/
+.fn__flex-column.fn__flex.fn__flex-1 .layout-tab-bar{
+	background-color: #FFFFFFBB !important;
+	opacity: 1;
+}
+/*页签项*/
+.layout-tab-bar .item {
+	background-color:var(--custom-component)!important;
+	opacity:0.6;
+}
+/*被选中的页签项*/
+.layout-tab-bar .item--focus{
+	background-color:var(--custom-transparent-deeper)!important;
+	border-bottom: 3px solid var(--b3-theme-primary);
+	box-shadow:rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+/*面包屑*/
+.protyle-breadcrumb{
+	background-color:#FFFFFFBB !important;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+/*任务栏中的选项*/
+.b3-menu, .protyle-util{
+	
+}
+.protyle-background{
+	margin: 20px 0px;
+}
+
+/*块引用卡片*/
+.block__popover {
+    background-color: #00000000;
+}
+.block__popover.block__popover--move.block__popover--open{
+    min-height: 90% !important;
+    margin: 0px auto;
+    margin: 10px;
+	overflow: hidden;
+	z-index: 2;
+	box-sizing: border-box;
+	border-radius: 6px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+} 
+.block__popover.block__popover--move.block__popover--open::before{
+    content: '';
+	position: absolute!important;
+	top: 0;	left: 0; right: 0;	bottom: 0;
+	z-index: -3;   
+	background-position: center top;
+	background-size: cover;
+	background-attachment: fixed;
+	background:#EEEEEE88;
+    backdrop-filter: blur(20px)!important;
+}
+.block__icons.block__icons--border{
+	background-color: var(--custom-components);
+}
+
+/**设置菜单**/
+.b3-dialog__container {
+	z-index: 2;
+    background-image:url(cliff_bg.jpg);
+    border-radius: 6px;
+    background-position:contain;
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+.b3-dialog__container::before{
+    content: '';
+	position: absolute!important;
+	top: 0;	left: 0; right: 0;	bottom: 0;
+	z-index: -3;   
+	background-position: center top;
+	background-size: cover;
+	background-attachment: fixed;
+	background: #EEEEEE00;
+    backdrop-filter: 12px;
+    border-radius: 6px;
+}
+.b3-text-filed.b3-text-filed--text.fn__block.b3-form__icon-input{
+	background-color:#EEEEEE33;
+}	
+.b3-tab-bar.b3-list.b3-list--background{
+	background-color: #EEEEEEAA;
+}
+.b3-tab-container{
+	background-color: #EEEEEE88;
+}
+/************************组件*************************/
+
+
+/*引述*/
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq{
+	border-left: 0.25em solid var(--b3-theme-primary-lighter);	
+	background-color: #EEEEEE88;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+/*文件夹字体*/
+.file-tree [data-type="navigation-folder"] .b3-list-item__text{
+
+}
+
+/*代码块*/
+.b3-typography .hljs, .protyle-wysiwyg .hljs{
+	background-color: #00000000 !important;
+	border-radius: 6px;
+}
+.protyle-linenumber__rows{
+	margin-top: 31px !important;
+	background-color: #00000000 !important;
+}
+.code-block {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    /*var(--custom-transparent)!important;*/
+    margin-top: 15px !important;
+    padding-top: 32px !important;
+    /* font-size: 14px; */
+    /* font-size:10px; */
+    background-color: #EEEEEE88;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+
+}
+.code-block:before {
+    content: ' ';
+    position: absolute;
+    background: #fa625c;
+    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+    border-radius: 50%;
+    /* margin-top: 10px; */
+    top:10px;
+    left: 15px;
+    height: 12px;
+    width: 12px;
+    z-index: 1;
+    
+}
+
+/*嵌入块*/
+.protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"]{
+	background-color:#EEEEEE88!important;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+	border-radius: 6px;
+}
+
+/*任务列表*/
+.protyle-action.protyle-action--task svg{
+	color: var(--b3-theme-primary);
+}
+.li.protyle-task--done .protyle-action.protyle-action--task svg{
+	color: var(--b3-theme-primary-light);
+}
+.li.protyle-task--done [data-node-id]{
+	color: var(--custom-font-lighter);
+}
+/*无序列表*/
+[data-type="NodeList"]>[data-node-id].li>.protyle-action[draggable="true"]::after {
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+/*无序列表*/
+[data-type="NodeList"] [data-type="NodeListItem"] svg{
+	color: var(--b3-theme-primary);
+}
+/*有序列表*/
+[data-type="NodeList"]>[data-node-id].li>.protyle-action.protyle-action--order[draggable="true"]::after {
+	box-shadow:none;
+}
+.protyle-wysiwyg [data-node-id].li>.protyle-action.protyle-action--order{
+	color:var(--b3-theme-primary);
+}
+
+/*块引用*/
+.protyle-wysiwyg [data-node-id] span[data-anchor]{
+	color: #4285f4CC;
+	border-bottom: thin dashed #4285f4CC
+}
+/*网页链接*/
+.protyle-wysiwyg [data-node-id] span[data-type="a"]{
+	color: #4285f4CC;
+	border-bottom: thin solid #4285f4CC
+}
+
+/*标签*/
+.protyle-wysiwyg [data-node-id] span[data-type="tag"]{
+	color: #fff;
+	background-color:#E9967AAA;
+	border-radius:8px;
+	border:none;
+	padding:2px;
+}
+.b3-typography code:not(.hljs), .protyle-wysiwyg code:not(.hljs){
+	background-color: var(--b3-theme-primary-lighter);
+}
+
+/*img*/
+.b3-typography img, .protyle-wysiwyg img{
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+/*ifram*/
+.iframe-content audio{
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+	border-radius: 25px;
+}
+.iframe-content iframe{
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.iframe-content video{
+	box-shadow: rgba(0, 0, 0, 0.23) -6px 6px 6px,rgba(0, 0, 0, 0.19) 5px 10px 20px, rgba(0, 0, 0, 0.23) 6px 6px 6px;
+}
+
+
+/*分割线*/
+.protyle-wysiwyg [data-node-id][data-type="NodeThematicBreak"].hr{
+	border-bottom: 2px solid var(--b3-border-color);
+}
+.protyle-wysiwyg [data-node-id].hr>div{
+    position: relative ;
+    margin:0 auto;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(120deg, #EE6363 0%, #EE799F 100%);
+    opacity: .8;
+    border-radius: 35%;
+    animation: rotateMain 8s linear infinite;
+}
+.protyle-wysiwyg [data-node-id].hr>div::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #EE6363 0%, #EE6AA7 100%);
+    opacity: .8;
+    box-shadow: 5px 5px 90px rgba(10, 102, 255, 0.5);
+    border-radius: 35%;
+    animation: rotateMain 8s linear 2s infinite;
+}
+.protyle-wysiwyg [data-node-id].hr>div::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(60deg, #EE7621 0%, #EE4000 100%);
+    opacity: .8;
+    box-shadow: 5px 5px 60px rgba(20, 102, 255, 0.3);
+    border-radius: 35%;
+    animation: rotateMain 8s linear 4s infinite;
+    z-index: -1;
+}
+
+
