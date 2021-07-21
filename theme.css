@@ -247,7 +247,6 @@ body.body--win32 {
 /*参考VIWZ的ROOM主题 文件树,以及编辑区的主体设置*/
 /*背景颜色和效果相关内容也在这里修改*/
 .fn__flex-1.fn__flex [data-type='wnd']{
-    min-height: 90% !important;
     margin: 0px auto;
     padding: 2px 10px;
     position: relative;
@@ -274,6 +273,19 @@ body.body--win32 {
     padding: 0;
 	max-width: var(--custom-max-width);
 }
+.layout__center .fn__flex [data-type='wnd']{
+    margin: 15px auto;
+    padding: 0;
+	max-width: var(--custom-max-width);
+}
+/*多页面编辑的分割线*/
+.layout__resize{
+	margin: 1px;
+}
+.fn__flex-column{
+	min-height: none;
+}
+
 /*编辑区左右padding*/
 .b3-typography p, .b3-typography [data-node-id], .protyle-wysiwyg p, .protyle-wysiwyg [data-node-id]{
 	margin-left:20px;
@@ -303,12 +315,12 @@ body.body--win32 {
 /*顶端菜单栏*/
 .toolbar{
 	background-color:var(--custom-components)!important;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 /*左侧菜单栏*/
 #dockLeft{
 	background-color:var(--custom-components)!important;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	box-shadow: rgba(0, 0, 0, 0.25) 1px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 1px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 1px 0px 0px 1px inset;
 }
 .block__icons--active{
 	background-color:none;
@@ -316,7 +328,7 @@ body.body--win32 {
 /*右侧菜单栏*/
 #dockRight{
 	background-color:var(--custom-components)!important;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	box-shadow: rgba(0, 0, 0, 0.25) -1px  0.5em 0.125em ,rgba(0, 0, 0, 0.25) -1px 0.0625em 0.0625em,  rgba(255, 255, 255, 0.1) -1px 0px 0px 1px inset;
 }
 
 
@@ -357,10 +369,8 @@ body.body--win32 {
     background-color: #00000000;
 }
 .block__popover.block__popover--move.block__popover--open{
-    min-height: 90% !important;
     margin: 0px auto;
     margin: 10px;
-	overflow: hidden;
 	z-index: 2;
 	box-sizing: border-box;
 	border-radius: 6px;
@@ -410,6 +420,9 @@ body.body--win32 {
 }
 .b3-tab-container{
 	background-color: #EEEEEE88;
+}
+.block__icons.block__icons--border{
+	background-color:#FFFFFFBB !important;
 }
 /************************组件*************************/
 
@@ -577,4 +590,7 @@ body.body--win32 {
     z-index: -1;
 }
 
-
+/*表格*/
+[data-node-id][data-type="NodeTable"] table{
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
